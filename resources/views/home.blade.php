@@ -1,14 +1,14 @@
 @extends('layout.base')
 
 @section('content')
-<div class="container d-flex flex-wrap">
+<div class="container-fluid d-flex text-light flex-wrap justify-content-center">
     @foreach ($films as $film)
-        <div class="card w-100">
-            <h1>{{ $film->title }}</h1>
-            <h3>{{ $film->original_title }}</h3>
-            <h4>{{ $film->nationality }}</h4>
-            <h4>{{ $film->date }}</h4>
-            <h4>{{ $film->vote }}</h4>
+        <div class="card w-25 bg-secondary m-2 p-4 shadow-lg">
+            <h1>Title: {{ $film->title }}</h1>
+            <h3>Original Title: {{ $film->original_title }}</h3>
+            <h4>Country: {{ $film->nationality }}</h4>
+            <h4>Date: {{ $film->date }}</h4>
+            <h4>Vote: {{ $film->vote }}<span class="text-warning">&star;</span></h4>
         </div>
     @endforeach
 
